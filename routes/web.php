@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/detail', function () {
-  return view('detail.detail1');
+  return view('detail.detail');
 });
 
 Route::get('/kontak', function () {
