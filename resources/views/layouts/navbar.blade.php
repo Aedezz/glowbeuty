@@ -10,7 +10,7 @@
             <!-- Menu Navigasi (Tengah, untuk Desktop) -->
             <div class="hidden md:flex justify-center flex-1">
                 <div class="flex items-baseline space-x-4">
-                    <a href="/glowbeuty" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
                     <a href="/produk" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium">Produk</a>
                     <a href="/tentang" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium">Tentang Kami</a>
                     <a href="/blog" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
@@ -64,7 +64,7 @@
         <!-- Mobile Menu Dropdown (Muncul saat Hamburger Diklik) -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-pink-100 rounded-md mt-2">
-                <a href="/glowbeuty" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="/" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
                 <a href="/produk" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Produk</a>
                 <a href="/tentang" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Tentang Kami</a>
                 <a href="/blog" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
