@@ -14,7 +14,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/glowbeuty', function () {
+Route::get('/', function () {
     return view('main_ds');
 });
 
