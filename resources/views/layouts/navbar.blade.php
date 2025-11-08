@@ -60,11 +60,11 @@
         <!-- Mobile Menu Dropdown (Muncul saat Hamburger Diklik) -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-pink-100 rounded-md mt-2">
-                <a href="/" class="inter font-semibold text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base">Home</a>
-                <a href="/produk" class="inter font-semibold text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base">Produk</a>
-                <a href="/tentang" class="inter font-semibold text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base">Tentang Kami</a>
-                <a href="/blog" class="inter font-semibold text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base">Blog</a>
-                <a href="/kontak" class="inter font-semibold text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base">Kontak</a>
+                <a href="/" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="/produk" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Produk</a>
+                <a href="/tentang" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Tentang Kami</a>
+                <a href="/blog" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="/kontak" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Kontak</a>
                 
                 <!-- Tambah Link Cart di Mobile (Opsional, untuk konsistensi) -->
                 <a href="#" class="text-gray-700 hover:text-pink-600 block px-3 py-2 rounded-md text-base font-medium">Cart</a>
