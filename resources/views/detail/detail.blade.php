@@ -261,7 +261,7 @@
   <div id="stickyBar" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 w-[min(720px,92%)] hidden">
     <div class="bg-white rounded-full shadow-lg p-3 flex items-center justify-between gap-3">
       <div class="flex items-center gap-3">
-        <img src="{{ asset('images/products/serum/1.jpg') }}" alt="mini" class="w-12 h-12 object-cover rounded" loading="lazy" />
+        <img src="https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600" alt="mini" class="w-12 h-12 object-cover rounded" loading="lazy" />
         <div>
           <div class="text-sm font-semibold">Serum Glow Essence</div>
           <div class="text-sm text-pink-600 font-bold">Rp 150.000</div>
