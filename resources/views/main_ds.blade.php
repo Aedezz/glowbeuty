@@ -8,7 +8,7 @@
   <meta property="og:description" content="Koleksi skincare premium untuk kulit sehat dan glowing alami." />
   <meta property="og:image" content="{{ asset('images/og-cover.jpg') }}" />
   <meta name="twitter:card" content="summary_large_image">
-  <title>Glowbeuty — Koleksi aProduk</title>
+  <title>Glowbeuty — Koleksi Produk</title>
 
   <!-- Fonts & Tailwind (browser build) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
