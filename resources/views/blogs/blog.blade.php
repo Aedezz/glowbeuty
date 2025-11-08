@@ -109,10 +109,8 @@
           <div class="flex gap-2 items-center">
             <span class="text-sm text-gray-500">Kategori:</span>
             <div id="categoryList" class="flex gap-2">
-              <button data-cat="all" class="chip">Semua</button>
               <button data-cat="skincare" class="chip">Skincare</button>
               <button data-cat="makeup" class="chip">Makeup</button>
-              <button data-cat="ulasan" class="chip">Ulasan</button>
               <button data-cat="lifestyle" class="chip">Lifestyle</button>
             </div>
           </div>
