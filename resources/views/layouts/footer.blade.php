@@ -20,17 +20,17 @@
             <div>
                 <h4 class="text-lg font-semibold mb-4 text-pink-300">Produk</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Skincare</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Makeup</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Haircare</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-pink-400 transition">Bodycare</a></li>
+                    <li><a href="/produk#productsGrid" class="text-gray-400 hover:text-pink-400 transition">Skincare</a></li>
+                    <li><a href="/produk#productsGrid" class="text-gray-400 hover:text-pink-400 transition">Makeup</a></li>
+                    <li><a href="/produk#productsGrid" class="text-gray-400 hover:text-pink-400 transition">Haircare</a></li>
+                    <li><a href="/produk#productsGrid" class="text-gray-400 hover:text-pink-400 transition">Bodycare</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-lg font-semibold mb-4 text-pink-300">Dukungan</h4>
                 <ul class="space-y-2">
                     <li><a href="/produk#faq" class="text-gray-400 hover:text-pink-400 transition">FAQ</a></li>
-                    <li><a href="/tentang-kami" class="text-gray-400 hover:text-pink-400 transition">Tentang Kami</a></li>
+                    <li><a href="/tentang" class="text-gray-400 hover:text-pink-400 transition">Tentang Kami</a></li>
                     <li><a href="/blog" class="text-gray-400 hover:text-pink-400 transition">Blog</a></li>
                     <li><a href="/kontak" class="text-gray-400 hover:text-pink-400 transition">Kontak Kami</a></li>
                 </ul>

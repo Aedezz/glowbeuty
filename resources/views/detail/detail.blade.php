@@ -41,7 +41,7 @@
     "@context":"https://schema.org/",
     "@type":"Product",
     "name":"Serum Glow Essence",
-    "image":["{{ asset('images/products/serum/1.jpg') }}"],
+    "image":["{{ asset('images/products/serum/abcd.png') }}"],
     "description":"Serum Glow Essence — Formula alami untuk kulit bersinar.",
     "sku":"SERUM-001",
     "brand":{"@type":"Brand","name":"Glowbeuty"},
@@ -72,7 +72,7 @@
         <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg">
           <!-- Main image -->
           <!-- Replace with dynamic: $product->images[0] -->
-          <img id="mainImage" src="{{ asset('images/products/serum/abcd.png') }}" alt="Serum Glow Essence" class="w-full h-[520px] object-cover rounded-t-2xl" loading="lazy" />
+          <img id="mainImage" src="https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2tpbmNhcmUlMjBwcm9kdWN0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Serum Glow Essence" class="w-full h-[520px] object-cover rounded-t-2xl" loading="lazy" />
           <!-- Quick badges -->
           <div class="absolute top-4 left-4">
             <span class="badge">Bestseller</span>
@@ -86,15 +86,20 @@
 
         <!-- Thumbnails -->
         <div class="flex items-center gap-3 mt-2">
-          {{-- Use @foreach for images --}}
-          @php
-            $thumbs = ['1.jpg','2.jpg','3.jpg','4.jpg'];
-          @endphp
-          @foreach($thumbs as $t)
-          <button class="thumb w-20 h-20 rounded-lg overflow-hidden border border-transparent focus:outline-none focus:ring-2 focus:ring-pink-300" data-src="{{ asset('images/products/serum/'.$t) }}">
-            <img src="{{ asset('images/products/serum/'.$t) }}" alt="thumb" class="w-full h-full object-cover" loading="lazy" />
-          </button>
-          @endforeach
+            @php
+                $thumbs = [
+                    'https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2tpbmNhcmUlMjBwcm9kdWN0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600',
+                    'https://plus.unsplash.com/premium_photo-1681364365252-387c05c06c40?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2tpbmNhcmUlMjBwcm9kdWN0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600',
+                    'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2tpbmNhcmUlMjBwcm9kdWN0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600',
+                    'https://plus.unsplash.com/premium_photo-1681364366165-526bf6247d7f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNraW5jYXJlJTIwcHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600'
+                ];
+            @endphp
+
+            @foreach($thumbs as $t)
+            <button class="thumb w-20 h-20 rounded-lg overflow-hidden border border-transparent focus:outline-none focus:ring-2 focus:ring-pink-300" data-src="{{ $t }}">
+                <img src="{{ $t }}" alt="thumb" class="w-full h-full object-cover" loading="lazy" />
+            </button>
+            @endforeach
         </div>
       </section>
 
@@ -222,15 +227,23 @@
         <div class="bg-white rounded-2xl p-6 shadow-md">
           <h3 class="font-semibold mb-4">Produk Lainnya</h3>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {{-- Example; swap with @foreach($related as $r) --}}
-            @for($i=1;$i<=4;$i++)
-            <a href="#" class="block bg-gray-50 p-2 rounded-lg text-center hover:shadow-md transition">
-              <img src="{{ asset('images/products/serum/thumb'.$i.'.jpg') }}" alt="related" class="w-full h-24 object-cover rounded mb-2" loading="lazy">
-              <div class="text-xs text-gray-700">Product {{ $i }}</div>
-            </a>
-            @endfor
+              @php
+                  $related = [
+                      'https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600',
+                      'https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600',
+                      'https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600',
+                      'https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600',
+                  ];
+              @endphp
+
+              @foreach($related as $i => $img)
+              <a href="/produk#productsGrid" class="block bg-gray-50 p-2 rounded-lg text-center hover:shadow-md transition">
+                  <img src="{{ $img }}" alt="related" class="w-full h-24 object-cover rounded mb-2" loading="lazy">
+                  <div class="text-xs text-gray-700">Product {{ $i + 1 }}</div>
+              </a>
+              @endforeach
           </div>
-        </div>
+      </div>
 
       </section>
     </div>
