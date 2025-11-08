@@ -76,7 +76,7 @@
     <div class="hero-clip relative">
       <!-- Video (placeholder: public/videos/hero-bg.mp4) -->
       <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="https://media.istockphoto.com/id/1193721481/id/foto/sikat-gigi-eco-bambu-alami-sabun-kelapa-deterjen-buatan-tangan.jpg?s=612x612&w=0&k=20&c=ttjl2CTZoRObIpQOX5CUme8-molkOll8MHAiHT_PLJc=">
-        <source src="{{ asset('videos/abcd2.mp4') }}" type="video/mp4">
+        <source src="{{ asset('/videos/abcd2.mp4') }}" type="video/mp4">
       </video>
 
       <!-- overlay gradient for readability -->

@@ -34,7 +34,7 @@
   <header class="hero-clip" role="banner" aria-label="Blog hero">
     <video id="blogHeroVideo" class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1556760544-74068565f05c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fHNraW4lMjBjYXJlJTIwcHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600">
       {{-- Ensure file exists at public/videos/blog-hero.mp4 or browser will ignore --}}
-      <source src="{{ asset('videos/abcd.mp4') }}" type="video/mp4">
+      <source src="{{ asset('/videos/abcd.mp4') }}" type="video/mp4">
       <!-- fallback image shown by poster -->
     </video>
     <div class="hero-overlay"></div>
