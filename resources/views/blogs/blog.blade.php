@@ -25,32 +25,31 @@
     .chip{display:inline-block;padding:.35rem .6rem;border-radius:999px;background:#fff;border:1px solid rgba(0,0,0,0.06);cursor:pointer}
   </style>
 </head>
-<body class="bg-gradient-to-br from-yellow-50 via-pink-50 to-rose-50 text-gray-800">
+<body class="bg-white text-gray-800">
 
   {{-- Navbar include --}}
   @include('layouts.navbar')
 
-  <!-- HERO -->
-  <header class="hero-clip" role="banner" aria-label="Blog hero">
-    <video id="blogHeroVideo" class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1556760544-74068565f05c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fHNraW4lMjBjYXJlJTIwcHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600">
-      {{-- Ensure file exists at public/videos/blog-hero.mp4 or browser will ignore --}}
-      <source src="{{ asset('videos/abcd.mp4') }}" type="video/mp4">
-      <!-- fallback image shown by poster -->
-    </video>
-    <div class="hero-overlay"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-      <div class="w-full lg:w-2/3 text-white">
-        <span class="badge mb-3 inline-block">Blog & Tips</span>
-        <h1 class="text-4xl md:text-5xl font-extralight leading-tight mb-4 reveal" id="heroTitle">Glowbeuty Blog — Cerita, Tips & Ulasan</h1>
-        <p class="text-lg md:text-xl mb-6 reveal" id="heroSub">Panduan perawatan, ulasan produk, dan inspirasi kecantikan untuk kulit bersinar.</p>
-        <div class="flex gap-3 reveal" id="heroCTAs">
-          <a href="#featured" class="px-5 py-3 bg-white text-pink-600 rounded-lg font-medium">Lihat Artikel Unggulan</a>
-          <a href="#subscribe" class="px-5 py-3 border border-white/30 text-white rounded-lg">Langganan Newsletter</a>
-        </div>
+  <!-- HERO (Blog, Fix Mobile) -->
+<header class="hero-clip" role="banner" aria-label="Blog hero">
+  <video id="blogHeroVideo" class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1556760544-74068565f05c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fHNraW4lMjBjYXJlJTIwcHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600">
+    {{-- Ensure file exists at public/videos/blog-hero.mp4 or browser will ignore --}}
+    <source src="{{ asset('videos/abcd.mp4') }}" type="video/mp4">
+    <!-- fallback image shown by poster -->
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+    <div class="w-full lg:w-2/3 pt-32 md:pt-24 py-12 text-white"> <!-- Tambah pt-32 untuk mobile, md:pt-24 untuk desktop -->
+      <span class="badge mb-3 inline-block">Blog & Tips</span>
+      <h1 class="text-4xl md:text-5xl font-extralight leading-tight mb-4 reveal" id="heroTitle">Glowbeuty Blog — Cerita, Tips & Ulasan</h1>
+      <p class="text-lg md:text-xl mb-6 reveal" id="heroSub">Panduan perawatan, ulasan produk, dan inspirasi kecantikan untuk kulit bersinar.</p>
+      <div class="flex gap-3 reveal" id="heroCTAs">
+        <a href="#featured" class="px-5 py-3 bg-white text-pink-600 rounded-lg font-medium">Lihat Artikel Unggulan</a>
+        <a href="#subscribe" class="px-5 py-3 border border-white/30 text-white rounded-lg">Langganan Newsletter</a>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- MAIN -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -117,9 +116,9 @@
         </div>
 
         <!-- Blog Grid -->
-        <section class="py-16 bg-gray-50">
+        <section class="py-7 bg-gray-50">
             <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Latest Articles</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Latest Articles</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                 @for ($i = 1; $i <= 6; $i++)
                 <article class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">

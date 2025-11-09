@@ -21,7 +21,7 @@
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 </head>
-<body class="bg-gradient-to-br from-yellow-50 via-pink-50 to-rose-50 min-h-screen text-gray-800">
+<body class="bg-white min-h-screen text-gray-800">
   @include('layouts.navbar')
 
   <main class="pt-8">
@@ -67,59 +67,58 @@
     </section>
 
     {{-- Produk --}}
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            @for ($i = 1; $i <= 8; $i++)
-              <!-- Produk 1 -->
-              <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition transform hover:scale-105">
-                <img src="https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2tpbmNhcmUlMjBwcm9kdWN0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Post {{ $i }}" class="w-full h-64 object-cover">
-                <div class="p-4">
-                    <h3 class="text-lg font-semibold text-gray-800">Glow Serum</h3>
-                    <p class="text-sm text-gray-500 mt-1">Serum vitamin C untuk kulit cerah alami.</p>
-                    <div class="flex items-center justify-between mt-3">
-                      <span class="text-pink-600 font-bold">Rp120.000</span>
-                      <span class="text-yellow-500 text-sm">★★★★★</span>
-                    </div>
-                    <button class="mt-3 w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 transition">
-                    Tambah ke Keranjang
-                    </button>
-                </div>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        @for ($i = 1; $i <= 8; $i++)
+          <!-- Produk 1 -->
+          <div class="bg-white shadow-md rounded-xl overflow-hidden transition transform hover:scale-[1.02]">
+            <img src="https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?auto=format&fit=crop&q=60&w=600"
+                alt="Post {{ $i }}"
+                class="w-full h-56 object-cover">
+            <div class="p-3">
+              <h3 class="text-base font-semibold text-gray-800">Glow Serum</h3>
+              <p class="text-sm text-gray-500 mt-1">Serum vitamin C untuk kulit cerah alami.</p>
+              <div class="flex items-center justify-between mt-2">
+                <span class="text-pink-600 font-bold">Rp120.000</span>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
-            @endfor
+              <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 transition text-sm">
+                Tambah ke Keranjang
+              </button>
+            </div>
           </div>
+        @endfor
+      </div>
 
-          {{-- Pagination --}}
-          <div class="flex justify-center mt-8">
-            <div class="flex justify-center mt-8">
-              <nav class="inline-flex gap-2" role="navigation" aria-label="Pagination">
-                <button class="px-4 py-2 rounded-lg bg-pink-600 text-white">1</button>
-                <button class="px-4 py-2 rounded-lg bg-white border">2</button>
-                <button class="px-4 py-2 rounded-lg bg-white border">3</button>
-                <span class="px-4 py-2 text-gray-500">...</span>
-                <button class="px-4 py-2 rounded-lg bg-white border">Next</button>
-              </nav>
-            </div>
-          </section>
+      {{-- Pagination --}}
+      <div class="flex justify-center mt-6">
+        <nav class="inline-flex gap-1" role="navigation" aria-label="Pagination">
+          <button class="px-3 py-1.5 rounded-lg bg-pink-600 text-white text-sm">1</button>
+          <button class="px-3 py-1.5 rounded-lg bg-white border text-sm">2</button>
+          <button class="px-3 py-1.5 rounded-lg bg-white border text-sm">3</button>
+          <span class="px-3 py-1.5 text-gray-500 text-sm">...</span>
+          <button class="px-3 py-1.5 rounded-lg bg-white border text-sm">Next</button>
+        </nav>
+      </div>
+    </section>
 
-          {{-- FAQ --}}
-          <section id="faq" class="py-16">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 class="text-3xl font-semibold text-center mb-8">Pertanyaan Umum</h2>
-              <div class="space-y-4">
-                <details class="bg-white p-6 rounded-lg shadow">
-                  <summary class="cursor-pointer list-none text-lg font-semibold text-pink-600">Apakah produk Glowbeuty aman untuk semua jenis kulit?</summary>
-                  <div class="mt-3 text-gray-700">Ya — produk kami diformulasikan dengan bahan pilihan dan telah diuji secara dermatologis.</div>
-                </details>
-                <details class="bg-white p-6 rounded-lg shadow">
-                  <summary class="cursor-pointer list-none text-lg font-semibold text-pink-600">Berapa lama pengiriman produk?</summary>
-                  <div class="mt-3 text-gray-700">Pengiriman biasanya 2–5 hari kerja.</div>
-                </details>
-              </div>
-            </div>
-          </section>
+      {{-- FAQ --}}
+      <section id="faq" class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-semibold text-center mb-8">Pertanyaan Umum</h2>
+          <div class="space-y-4">
+            <details class="bg-white p-6 rounded-lg shadow">
+              <summary class="cursor-pointer list-none text-lg font-semibold text-pink-600">Apakah produk Glowbeuty aman untuk semua jenis kulit?</summary>
+              <div class="mt-3 text-gray-700">Ya — produk kami diformulasikan dengan bahan pilihan dan telah diuji secara dermatologis.</div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow">
+              <summary class="cursor-pointer list-none text-lg font-semibold text-pink-600">Berapa lama pengiriman produk?</summary>
+              <div class="mt-3 text-gray-700">Pengiriman biasanya 2–5 hari kerja.</div>
+            </details>
+          </div>
+        </div>
       </section>
+    </section>
   </main>
 
   @include('layouts.footer')

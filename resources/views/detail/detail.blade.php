@@ -60,7 +60,7 @@
   }
   </script>
 </head>
-<body class="bg-gradient-to-br from-yellow-50 via-pink-50 to-rose-50 text-gray-800">
+<body class="bg-white text-gray-800">
 
   {{-- NAVBAR --}}
   @include('layouts.navbar')

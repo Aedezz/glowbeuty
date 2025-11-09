@@ -55,12 +55,44 @@
     /* small utilities */
     .badge{background:linear-gradient(90deg,var(--accent),#f472b6);color:white;padding:.25rem .5rem;border-radius:.5rem;font-weight:600}
 
-    @media (min-width:1280px){
-      .grid-xl{grid-template-columns:repeat(4,minmax(0,1fr));}
+    /* Tambahan untuk mengecilkan kartu produk */
+    .product-card {
+      transform-origin: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    /* Ukuran konten di dalam kartu */
+    .product-card .p-3 {
+      padding: 0.75rem !important; /* kecilkan padding dalam */
+    }
+
+    /* Kecilkan ukuran font dalam kartu */
+    .product-card h3 {
+      font-size: 1rem; /* semula text-lg */
+    }
+    .product-card p {
+      font-size: 0.875rem;
+    }
+
+
+    /* grid lebih padat */
+    @media (min-width: 768px) {
+      .grid.products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem; /* sedikit lebih rapat */
+      }
+    }
+    @media (min-width: 1280px) {
+      .grid.products {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-yellow-100 via-pink-50 to-rose-50 min-h-screen text-gray-800">
+<body class="bg-white min-h-screen text-gray-800">
 
   {{-- NAVBAR (gunakan layout kamu) --}}
   @include('layouts.navbar')
@@ -68,7 +100,7 @@
   <!-- HERO -->
   <header class="relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center pt-16 pb-10">
         <div>
           <h1 class="text-4xl md:text-5xl font-extralight text-gray-900 leading-tight mb-4 hero-fade" id="heroTitle">Glowbeuty — Cantik, Lembut, Terasa</h1>
           <p class="text-lg text-gray-700 mb-6 hero-fade" id="heroSubtitle">Rangkaian skincare & makeup premium. Formulasi bersih, teruji dermatologis, untuk kulit sehat dan glowing alami.</p>
@@ -100,8 +132,8 @@
 
         <!-- HERO IMAGE & CTA -->
         <div class="hidden lg:block relative">
-          <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/60">
-            <img src="https://plus.unsplash.com/premium_photo-1661583853451-2361111f284f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2tpbiUyMGNhcmUlMjBwcm9kdWN0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Glowbeuty hero" class="w-full h-96 object-cover">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/60">
+            <img src="https://plus.unsplash.com/premium_photo-1661583853451-2361111f284f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2tpbiUyMGNhcmUlMjBwcm9kdWN0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Hero Glowbeuty" class="w-full object-cover h-72">
             <div class="absolute bottom-6 left-6 bg-white/70 backdrop-blur-md rounded-xl p-4">
               <h3 class="text-lg font-semibold">Promo Bundling</h3>
               <p class="text-sm text-gray-700">Diskon 20% untuk pembelian paket skincare lengkap.</p>
@@ -119,7 +151,7 @@
   </header>
 
   <!-- FILTERS + PRODUCTS -->
-  <main id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <main id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
       <div class="flex gap-3 flex-wrap">
         <button class="px-4 py-2 rounded-lg bg-white shadow-sm border smooth">Semua</button>
@@ -140,14 +172,12 @@
       </div>
     </div>
 
-    <!-- Produk Grid (manual 8 produk) -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-
-      @for ($i = 1; $i <= 6; $i++)
-      <!-- Produk 1 -->
-      <article class="frosted rounded-2xl overflow-hidden shadow-lg p-4 tilt smooth" tabindex="0" aria-labelledby="p1">
+    <!-- Produk Grid -->
+    <div class="grid products grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+      @for ($i = 1; $i <= 8; $i++)
+      <article class="product-card frosted rounded-2xl overflow-hidden shadow-lg p-3 tilt smooth" tabindex="0" aria-labelledby="p1">
         <div class="relative ratio-3-4 rounded-md overflow-hidden">
-          <img loading="lazy" src="https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2tpbmNhcmUlMjBwcm9kdWN0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Glow Serum" class="w-full h-full object-cover">
+          <img loading="lazy" src="https://plus.unsplash.com/premium_photo-1681364365218-2a882a191f2a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600" alt="Glow Serum" class="w-full h-full object-cover">
           <div class="absolute inset-0 flex items-end p-4 card-overlay">
             <div class="w-full flex justify-between items-end">
               <span class="badge">Bestseller</span>
@@ -156,18 +186,18 @@
           </div>
         </div>
         <div class="p-3">
-          <h3 id="p1" class="text-lg font-semibold text-gray-900">Glow Serum</h3>
-          <p class="text-sm text-gray-600 mt-1">Serum vitamin C & niacinamide untuk mencerahkan dan meratakan warna kulit.</p>
-          <div class="flex items-center justify-between mt-4">
+          <h3 id="p1" class="font-semibold text-gray-900">Glow Serum</h3>
+          <p class="text-gray-600 mt-1">Serum vitamin C & niacinamide untuk mencerahkan dan meratakan warna kulit.</p>
+          <div class="flex items-center justify-between mt-3">
             <div>
-              <div class="text-2xl font-bold text-pink-600">Rp 120.000</div>
-              <div class="text-xs text-gray-500">Gratis ongkir for orders over Rp300.000</div>
+              <div class="text-xl font-bold text-pink-600">Rp 120.000</div>
+              <div class="text-xs text-gray-500">Gratis ongkir di atas Rp300.000</div>
             </div>
             <div class="text-sm text-yellow-400">★★★★★ <span class="text-gray-500 text-xs">4.8</span></div>
           </div>
-          <div class="mt-4 grid grid-cols-2 gap-3">
-            <button class="bg-pink-600 text-white py-2 rounded-lg">Tambah ke Keranjang</button>
-            <a href="/detail" class="border border-pink-200 py-2 rounded-lg text-center">Detail Produk</a>
+          <div class="mt-3 grid grid-cols-2 gap-2">
+            <button class="bg-pink-600 text-white py-2 rounded-lg text-sm">Tambah</button>
+            <a href="/detail" class="border border-pink-200 py-2 rounded-lg text-center text-sm">Detail</a>
           </div>
         </div>
       </article>

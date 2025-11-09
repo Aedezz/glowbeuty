@@ -51,10 +51,10 @@
 
     /* mobile video height */n
     @media (max-width:1024px){
-      .hero-clip{height:48vh}
+      .hero-clip{height:46vh;}
     }
     @media (min-width:1024px){
-      .hero-clip{height:78vh}
+      .hero-clip{height:70vh;} /* dari 78vh → 70vh */
     }
 
     /* decorative underline */
@@ -66,12 +66,12 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-yellow-50 via-pink-50 to-rose-50 text-gray-800">
+<body class="bg-white text-gray-800">
 
   {{-- NAVBAR --}}
   @include('layouts.navbar')
 
-  <!-- HERO with VIDEO background -->
+  <!-- HERO with VIDEO background (Fix Responsif) -->
   <header class="relative overflow-hidden">
     <div class="hero-clip relative">
       <!-- Video (placeholder: public/videos/hero-bg.mp4) -->
@@ -83,8 +83,8 @@
       <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/70"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <div class="w-full lg:w-2/3 py-12">
-          <span class="badge mb-4 inline-block">Since 2020</span>
+        <div class="w-full lg:w-2/3 pt-20 md:pt-10 pb-6">
+          <span class="badge mb-2 inline-block">Since 2020</span>
           <h1 class="text-4xl md:text-5xl font-extralight leading-tight text-gray-900 mb-4 reveal" id="heroTitle">Tentang Glowbeuty</h1>
           <p class="text-lg text-gray-700 mb-6 reveal" id="heroLead">Kami menggabungkan warisan alam, ilmu modern, dan etika berkelanjutan untuk menciptakan produk yang menyayangi kulit dan bumi.</p>
 
@@ -120,7 +120,7 @@
     </section>
 
     <!-- Timeline (vertical) -->
-    <section class="pt-6">
+    <section class="pt-2">
       <h2 class="text-3xl font-semibold text-center mb-8">Perjalanan Kami</h2>
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
         <div class="md:col-span-1 md:flex md:justify-center">
@@ -129,11 +129,11 @@
         <div class="md:col-span-11 space-y-6">
           <!-- Item 2020 -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-            <div class="md:col-span-3 text-right md:pr-6">
+            <div class="md:col-span-3 text-center md:pr-6">
               <div class="text-xl font-semibold">2020</div>
               <div class="text-sm text-gray-500">Founding</div>
             </div>
-            <div class="md:col-span-9 bg-white p-6 rounded-lg shadow-md reveal">
+            <div class="md:col-span-9 bg-white p-4 rounded-lg shadow-md reveal">
               <h3 class="font-semibold">Awal Mula</h3>
               <p class="text-gray-600">Glowbeuty didirikan oleh sekelompok profesional kecantikan yang ingin membuat produk aman berbasis alam.</p>
             </div>
@@ -141,11 +141,11 @@
 
           <!-- Item 2021 -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-            <div class="md:col-span-3 text-right md:pr-6">
+            <div class="md:col-span-3 text-center md:pr-6">
               <div class="text-xl font-semibold">2021</div>
               <div class="text-sm text-gray-500">Peluncuran Produk</div>
             </div>
-            <div class="md:col-span-9 bg-white p-6 rounded-lg shadow-md reveal">
+            <div class="md:col-span-9 bg-white p-4 rounded-lg shadow-md reveal">
               <h3 class="font-semibold">Peluncuran Koleksi Pertama</h3>
               <p class="text-gray-600">Kami meluncurkan rangkaian pertama: cleanser, toner, serum—yang cepat mendapat sambutan positif.</p>
             </div>
@@ -153,11 +153,11 @@
 
           <!-- Item 2023 -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-            <div class="md:col-span-3 text-right md:pr-6">
+            <div class="md:col-span-3 text-center md:pr-6">
               <div class="text-xl font-semibold">2023</div>
               <div class="text-sm text-gray-500">Internasional</div>
             </div>
-            <div class="md:col-span-9 bg-white p-6 rounded-lg shadow-md reveal">
+            <div class="md:col-span-9 bg-white p-4 rounded-lg shadow-md reveal">
               <h3 class="font-semibold">Ekspansi & Keberlanjutan</h3>
               <p class="text-gray-600">Memperluas pasar & memperkenalkan kemasan ramah lingkungan untuk mengurangi jejak karbon.</p>
             </div>
@@ -165,11 +165,11 @@
 
           <!-- Item 2025 -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-            <div class="md:col-span-3 text-right md:pr-6">
+            <div class="md:col-span-3 text-center md:pr-6">
               <div class="text-xl font-semibold">2025</div>
               <div class="text-sm text-gray-500">Visi Kedepan</div>
             </div>
-            <div class="md:col-span-9 bg-white p-6 rounded-lg shadow-md reveal">
+            <div class="md:col-span-9 bg-white p-4 rounded-lg shadow-md reveal">
               <h3 class="font-semibold">Menuju Inovasi Berkelanjutan</h3>
               <p class="text-gray-600">Mengintegrasikan lebih banyak bahan yang dapat terurai dan memperkuat komunitas petani bahan baku lokal.</p>
             </div>
